@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>For You 💗</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+<!-- CONFETTI CANVAS (GLOBAL – DO NOT MOVE) -->
+<canvas id="confettiCanvas"></canvas>
+
+<!-- =====================
+     LOCK SCREEN
+===================== -->
+<div id="lockScreen" class="card">
+  <h2>Something special is waiting babyy 💗💗</h2>
+
+  <div id="countdown"></div>
+
+  <p class="quote">Sabar ka fal meetha hota hai 🕰️💗</p>
+
+  <button id="giftBtn">🎁</button>
+</div>
+
+<!-- =====================
+     BIRTHDAY OVERLAY
+===================== -->
+<div id="birthdayOverlay">
+  <h1 class="birthday-text">Happy Birthday Jaanu 💗</h1>
+</div>
+
+<!-- =====================
+     ENVELOPE SECTION
+===================== -->
+<div id="envelopeSection" class="hidden">
+  <img
+    id="envelope"
+    src="{{ url_for('static', filename='assets/envelope.PNG') }}"
+    class="floating-envelope"
+  >
+
+  <div id="letter">
+    <p id="letterText"></p>
+  </div>
+</div>
+
+<!-- TAP TO CONTINUE AFTER LETTER -->
+<div id="tapToContinue" class="tap hidden">
+  Tap to continue 💗
+</div>
+
+<!-- =====================
+     CARD FLIP SECTION
+===================== -->
+<div id="cardSection" class="hidden">
+  <h2 class="card-heading">Little Pieces of My Heart 💗</h2>
+
+  <div class="card-container">
+
+    <div class="flip-card">
+      <div class="flip-inner">
+        <div class="flip-front">My baddieeee 😘🔥</div>
+        <div class="flip-back">
+          <img src="{{ url_for('static', filename='images/black dress.jpg') }}">
+        </div>
+      </div>
+    </div>
+
+    <div class="flip-card">
+      <div class="flip-inner">
+        <div class="flip-front">
+          The pic you shared to insta, not me 😔 but maaf kar diya cuz SO CUTEE 😍
+        </div>
+        <div class="flip-back">
+          <img src="{{ url_for('static', filename='images/mirror selfie.PNG') }}">
+        </div>
+      </div>
+    </div>
+
+    <div class="flip-card">
+      <div class="flip-inner">
+        <div class="flip-front">Red Saree, heart stolen 💖</div>
+        <div class="flip-back">
+          <img src="{{ url_for('static', filename='images/red saree.jpg') }}">
+        </div>
+      </div>
+    </div>
+
+    <div class="flip-card">
+      <div class="flip-inner">
+        <div class="flip-front">My traditional babyyy 🧿✨</div>
+        <div class="flip-back">
+          <img src="{{ url_for('static', filename='images/white kurti.jpg') }}">
+        </div>
+      </div>
+    </div>
+
+    <div class="flip-card">
+      <div class="flip-inner">
+        <div class="flip-front">The little girl who never knew she'd once be the reason someone's heart beats 😭😘</div>
+        <div class="flip-back">
+          <img src="{{ url_for('static', filename='images/baby.jpg') }}">
+        </div>
+      </div>
+    </div>
+
+    <div id="cardsTapContinue" class="tap-continue hidden">
+      Tap to continue 💗
+    </div>
+
+  </div>
+</div>
+
+<!-- =====================
+     HEART GAME
+===================== -->
+<div id="heartGame" class="hidden">
+  <h2 class="heart-heading">Catch 4 hearts 💗</h2>
+  <div id="score">Score: 0 / 4</div>
+
+  <div class="heart-container" id="heartContainer"></div>
+
+  <div id="heartMessage"></div>
+</div>
+
+<!-- =====================
+     HEART END SCREEN
+===================== -->
+<!-- =====================
+     HEART END SCREEN
+===================== -->
+<div id="heartEndScreen" class="hidden">
+  <div class="end-content">
+
+    <div id="endMainText" class="end-text hidden">
+      You’ve touched my heart every time 💖
+    </div>
+
+    <div id="endSubText" class="end-sub hidden">
+      A gift for my winner babyy!! 🏆🎁
+    </div>
+
+    <div id="endTap" class="end-tap glow">
+      Whenever you’re ready ✨
+    </div>
+
+  </div>
+</div>
+
+
+<!-- =====================
+     FINAL GIFTS SECTION
+===================== -->
+<div id="giftScreen" class="hidden">
+  <div class="gift-row">
+
+    <div class="gift-box"
+         data-img="{{ url_for('static', filename='images/us.jpg') }}">
+      <img src="{{ url_for('static', filename='assets/giftbox.PNG') }}">
+    </div>
+
+    <div class="gift-box"
+         data-img="{{ url_for('static', filename='images/us in ghibli 2.jpg') }}">
+      <img src="{{ url_for('static', filename='assets/giftbox.PNG') }}">
+    </div>
+
+  </div>
+</div>
+<script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
+<div id="finalMessage"
+     style="
+       position: fixed;
+       inset: 0;
+       display: none;
+       align-items: center;
+       justify-content: center;
+       text-align: center;
+       font-size: 28px;
+       font-weight: 600;
+       color: #e91e63;
+       background: linear-gradient(135deg, #ffdde1, #ee9ca7);
+       z-index: 99999;
+       padding: 30px;
+     ">
+  You've touched my heart everytime! 💘<br>
+  Discord check karo for your reward!!
+</div>
+
+</body>
+</html>
